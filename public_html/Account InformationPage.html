@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Account Information Page</title>
+</head>
+<body onload="LoadSold();">
+    <link rel="stylesheet" type="text/css" href="MainStyles.css">
+	<script src="MainJava.js"></script>
+
+<h1>Account Information </h1><hr>
+<div id ="MenuBar"> 
+            <a href="ExchangeScreen.html" class = "button">Exchange Screen</a>
+            <a href="Account InformationPage.html" class = "button_current">Account Information</a>
+            <a href="AddInventory.html" class = "button">Add Inventory</a>
+            <a href="StartHere-LoginScreen.html" class = "button" style ="float: right;">Sign Out</a>
+			<a href="SomethingToSell.html" class = "button">Something to sell?</a>
+</div>
+<div id="grad1"> 
+        <div id="UserInfo">
+
+				<table id="TUserInfo">
+					<tbody>
+						<tr>
+							<td><input type="text" name="Uname" class="UserInfo" id="Uname" readonly value="Error"></td>
+						</tr>
+						<tr>
+							<td>Rmng. Balance: </td>
+						</tr>
+						<tr>
+							<td>$<input type="text" name="RmBalance" class="UserInfo" id="RmBalance" readonly value="Error" title="Rmng. Balance">
+							</td>
+						</tr>
+						
+					</tbody>
+				</table> <!-- END Table UserInfo -->
+        </div>
+<span id=TableSold></span>
+<span id=TableBought></span>
+<span id=TableInventory></span>
+
+</div>
+</body>
+</html>

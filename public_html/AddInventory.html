@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+    <title> Add Inventory </title>
+    <h1>Add Inventory</h1>
+    <hr>
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="MainStyles.css">
+    <script src="MainJava.js"></script>
+</head>
+<form id="AddInventory" action="AddInventory.php" onsubmit="">
+
+    <body onload="UserInfo();">
+        <div id="MenuBar">
+            <a href="ExchangeScreen.html" class="button">Exchange Screen</a>
+            <a href="Account InformationPage.html" class="button">Account Information</a>
+            <a href="AddInventory.html" class="button_current">Add Inventory</a>
+            <a href="StartHere-LoginScreen.html" class="button" style="float: right;">Sign Out</a>
+            <a href="SomethingToSell.html" class="button">Something to sell?</a>
+        </div>
+        <div id="UserInfo">
+
+            <table id="TUserInfo">
+                <tbody>
+                    <tr>
+                        <td><input type="text" name="Uname" class="UserInfo" id="Uname" readonly value="Error"></td>
+                    </tr>
+                    <tr>
+                        <td>Rmng. Balance: </td>
+                    </tr>
+                    <tr>
+                        <td>$<input type="text" name="RmBalance" class="UserInfo" id="RmBalance" readonly value="$Error"
+                                title="Rmng. Balance">
+                        </td>
+                    </tr>
+                </tbody>
+            </table> <!-- END Table UserInfo -->
+        </div>
+        <div id="grad1">
+            <p> Adding a product that already exists in your inventory will add to the quantity in your stock</p>
+            <table>
+                <tr>
+                    <td>
+                        Product Name: <br />
+                        <input type="text" value="" name="productname" placeholder="Product name" required minlength="3" maxlength="200"
+                            onblur="ConsoleLogData(this.name, this.value)" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Description: <br />
+                        <textarea rows="4" cols="50" name="description" placeholder="Description" maxlength="200"
+                            onblur="ConsoleLogData(this.name, this.value)">
+
+						</textarea>
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Quantity: <br />
+                        <input type="number" value="" name="quantity" placeholder="Quantity" required min="1"
+                            onblur="ConsoleLogData(this.name, this.value)" >
+                    </td>
+                </tr>
+                <!--
+                <tr>
+                    <td>
+                        Price per 1 unit: Insert without $ sign<br />
+                        <input type="number" value="" name="price" placeholder="Product price"
+                            onblur="ConsoleLogData(this.name, this.value)" required minlength="3" maxlength="20">
+                    </td>
+                </tr>-->
+            </table>
+            <input type="submit" value="Add Item"> <!-- Stay on page after submit -->
+            <input type="button" value="Clear" onClick="location.href=location.href">
+        </div>
+
+    </body>
+</form>
+
+</html>

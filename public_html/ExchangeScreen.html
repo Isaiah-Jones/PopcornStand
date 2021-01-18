@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Exchange Screen</title>
+</head>
+
+<body onload="LoadInventory();">
+
+	<h1>Exchange Screen</h1>
+	<hr>
+	<link rel="stylesheet" type="text/css" href="MainStyles.css">
+	<script src="MainJava.js"></script>
+	<div id="MenuBar">
+		<a href="ExchangeScreen.html" class="button_current">Exchange Screen</a>
+		<a href="Account InformationPage.html" class="button">Account Information</a>
+		<a href="AddInventory.html" class="button">Add Inventory</a>
+		<a href="StartHere-LoginScreen.html" class="button" style="float: right;">Sign Out</a>
+		<a href="SomethingToSell.html" class="button">Something to sell?</a>
+	</div>
+	<div id="grad1">
+		<form id="ExchangeScreen" action="" onsubmit="">
+			<!-- genrate table according to SQL -->
+			<h1>
+				<div id="forSale">For Sale </div>
+			</h1>
+			<div id="UserInfo">
+
+				<table id="TUserInfo">
+					<tbody>
+						<tr>
+							<td><input type="text" name="Uname" class="UserInfo" id="Uname" readonly value="Error"></td>
+						</tr>
+						<tr>
+							<td>Rmng. Balance: </td>
+						</tr>
+						<tr>
+							<td>$<input type="text" name="RmBalance" class="UserInfo" id="RmBalance" readonly value="Error" title="Rmng. Balance">
+							</td>
+						</tr>
+						<tr>
+							<td>Order Total (excluding tax): </td>
+						</tr>
+						<tr>
+							<td>$<input type="text" name="OrderTotal" class="UserInfo" id="OrderTotal" readonly value="0.00" title="Order Total">
+							</td>
+
+
+						</tr>
+						
+					</tbody>
+				</table> <!-- END Table UserInfo -->
+				<span id="YouOwn"></span>
+			</div> <!-- position: sticky; create div in top right corner, which shows user info, ablance, and total price -->
+			<form id="ExchangeScreen" action="" onsubmit="">
+				<span id=TableFill></span>
+				<hr>
+				<!-- END PRODUCT SHOWING, INTRODUCE PAYMENT -->
+				<h3 class="PTypeHeader"> Payment Method </h3>
+				<p>
+					<input type="radio" name="payment" value="visa" checked="checked" /> Visa <br />
+					<input type="radio" name="payment" value="mc" />Master Card <br />
+					<input type="radio" name="payment" value="discover" />Discover <br />
+					<br />
+					<!-- The submit and reset buttons -->
+					<button type="button" onclick="DoTransaction()">Submit Order</button>
+					<input type="button" value="Clear" onClick="location.href=location.href">
+				</p>
+	</div>
+	</form>
+
+</body>
+
+</html>

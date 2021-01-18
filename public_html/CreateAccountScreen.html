@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Create account screen</title>
+</head>
+<body >
+<h1>Create account screen</h1> <hr>
+<link rel="stylesheet" type="text/css" href="MainStyles.css">
+<script src="MainJava.js"></script>
+<div id="grad1"> 
+<form>
+<!-- TABLE -->
+<h3>Sign Up</h3>
+<table>
+	<tbody>
+		<tr>
+			<td>First name:<br>
+  <input type="text" value="" name="firstname" placeholder="Your First Name" required minlength="3" maxlength="14" onblur="ConsoleLogData(this.name, this.value)" title="First name must have 3 characters minimum">
+   </td>
+			<td>Last name:<br>
+  <input type="text" name="lastname" placeholder="Your last Name" required maxlength="14" onblur="ConsoleLogData(this.name, this.value)" title="Last name must have 3 characters minimum">
+   </td>
+		</tr>
+		<tr>
+			<td>Username:<br>
+  <input type="text" name="username" placeholder="Your user Name" required pattern=".{3,}" maxlength="14" onblur="ConsoleLogData(this.name, this.value)" title="Username must have 3 characters minimum">
+   </td>
+			<td>Email:<br>
+  <input type="email" name="email" placeholder="Your email address" required pattern=".{3,}" maxlength="30" onblur="ConsoleLogData(this.name, this.value)">
+   </td>
+		</tr>
+		<tr>
+			<td>Password:<br>
+  <input type="password" name="pw1" id="pw1" placeholder="Your Password" required pattern=".{3,}" title="Password must have 3 characters minimum" maxlength="30" onblur="ConsoleLogData(this.name, this.value)" >
+   </td>
+   <td>Re-enter password:<br>
+  <input type="password" name="pw2" id="pw2" placeholder="Re-enter Password" required minlength="3" maxlength="30" onblur="CheckPw()">
+   </td>
+   </tr>
+		<tr>
+		<td>Reminder:<br>
+  <input type="text" name="reminder" placeholder="Favorite color, dog's name" required pattern=".{3,}" maxlength="30" onblur="ConsoleLogData(this.name, this.value)" title="Reminder must have 3 characters minimum">
+   </td>
+   <td>Account fund:<br>
+  <input type="number" name="accountfund" pattern="\d*" placeholder="Enter desired fund" title="Fund can be up to $1000 and must be a number" required maxlength="4" onblur="ConsoleLogData(this.name, this.value)">
+    </td>	
+		</tr>
+	</tbody>
+</table>
+<!-- END TABLE -->  
+  <button type="button" onclick="ValidateData()">Create account</button> <!-- Return to HomePage after submit -->
+  <button type="reset" >Reset</button><br />
+  <input type="button" value="Return to Login" onClick="location.href='StartHere-LoginScreen.html'">
+
+
+ <!-- <p></p><button type="button" onclick="LogAllInfo()">Log All Info</button> -->
+   <!--  <button><a href="StartHere-LoginScreen.html"> </a> Go To Login Page</button> -->
+
+</form> 
+
+</div>
+</body>
+</html>

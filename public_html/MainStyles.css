@@ -1,0 +1,110 @@
+/*Gradient background color*/
+
+#grad1 {
+    /*change . to #*/
+    font-size: 20px;
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD";
+    height: 100%;
+    width: 100%; 
+   
+    color: black;
+    opacity: 1;
+	
+}
+body {
+ background-image: linear-gradient(141deg, #58e6a7 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+
+#MenuBar {
+    border-bottom: black medium solid;
+    /*background: rgb(255, 94, 20);*/
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    float: top;
+    height: 30px;
+    width: 100%;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    padding: 5px;
+
+    text-decoration: none;
+    color: initial;
+    background-color: pink;
+}
+
+a.button_current {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    padding: 5px;
+
+    text-decoration: none;
+    color: initial;
+    background-color: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 10px #c1c1c1;
+       -moz-box-shadow: inset 0px 0px 10px #c1c1c1;
+            box-shadow: inset 0px 0px 10px #c1c1c1;
+     outline: none;
+  }
+  
+  textarea {
+  resize: none;
+}
+
+/*Makes all input fields the same size*/
+ select, input[type="text"][type="password"]{
+      width:100%;
+      box-sizing:border-box;
+    }
+
+#UserInfo {
+   /* border-color: black;
+    border-width: medium;
+    border-style: solid;*/
+   /* background: #FF1493;*/
+    position: -webkit-sticky;
+    position: sticky;
+    top: 30px;
+    float: right;
+    height: 185px;
+    width: 230px;
+}
+
+/* Exchange CSS */
+td, th, table {
+	border: medium solid black; 
+	border-collapse: collapse;
+	padding-right: 10px;
+}
+
+#TUserInfo{
+    background: #FF1493;
+}
+	  
+#TableHeader{
+background-color: Bisque;
+}
+
+#PDescription {
+  resize: none;
+  background-color: lightgrey;
+  width: 500px;
+  height: 110px;
+}
+
+.PTypeHeader{
+background-color: coral;
+}
+
+#forSale {
+	text-align: center;
+	background-color: #FF1493;
+	border-style: dotted;
+}
+
+/* END Exchange CSS */

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="MainStyles.css">
+<script src="MainJava.js"></script>
+<body>
+    <h1>Something To Sell</h1><hr>
+	<div id ="MenuBar"> 
+            <a href="ExchangeScreen.html" class = "button">Exchange Screen</a>
+            <a href="Account InformationPage.html" class = "button">Account Information</a>
+            <a href="AddInventory.html" class = "button">Add Inventory</a>
+            <a href="StartHere-LoginScreen.html" class = "button" style ="float: right;">Sign Out</a>
+			<a href="SomethingToSell.html" class = "button_current">Something to sell?</a>
+    </div>
+<div id="grad1">
+<h1><div id="forSale">Enter the required information for items you want to sell.</div></h1>
+<h2><span class="PTypeHeader">Your Inventory</span> </h2>
+<div class = "container" style="border:1px solid #000000; width: 40%; overflow:auto">
+<div id=iname_error></div><p></p>
+<div style="background: #F0F0F0; width:95%; height: 30px; border: 1px solid #000000;">\\ Item</div>
+<div style="background: #F0F0F0; width:95%; height:30px; border: 1px solid #000000">\\ Item</div>
+</div>
+<br>
+<hr>
+<!-- Start form code -->
+<h2><span class="PTypeHeader">Register Items</span> </h2>
+<span>Enter Price without dollar sign. Ex. "3.99"</span>
+<form id="SomethingToSell" action="SomethingToSell.php" onsubmit="SellSomething()">
+<table>
+<tbody>
+<tr id="TableHeader">
+	<th> ProductName </th>
+	<th> Price per unit </th>
+	<th> Quantity </th>
+	<th> Description </th>
+</tr>
+<tr>
+	<td> <div class="Product" name= "PName"><input type="text" name="prodName1" placeholder="Product name" onblur="ConsoleLogData(this.name, this.value)" required> </div> </td> 
+	<td> <div class="Product" name= "PPrice1">
+	<input type="text" placeholder="$0.00" name="price" required  onblur="ConsoleLogData(this.name, this.value)"></div> </td>
+	<td> <div class="Product" name= "PQuantity"><input type="number" name="quantity1" min="1" max="99" required  onblur="ConsoleLogData(this.name, this.value)"></div></td>
+	<td> <textarea id="PDescription" name="pDescription1" onblur="ConsoleLogData(this.name, this.value)" required></textarea></td><br>
+</tr>
+<tr>
+<!--	<td> <div class="Product" name= "PName2"><input type="text" name="Prodname2" placeholder="Product name" onblur="ConsoleLogData(this.name, this.value)" required></div> </td> 
+	<td> <div class="Product" name= "PPrice2"><input type="text" placeholder="$0.00" name="price" required  onblur="ConsoleLogData(this.name, this.value)" required></div> </td>
+	<td> <div class="Product" name= "PQuantity2"><input type="number" name="quantity" min="1" max="99" required  onblur="ConsoleLogData(this.name, this.value)" required></div></td>
+	<td> <textarea id="PDescription" name="PDescription2" onblur="ConsoleLogData(this.name, this.value)" required></textarea></td>
+-->
+</tr>
+</tbody>
+</table> <hr>
+
+<span>Register current items in order to add more items.</span><br>
+<input type="submit" value="Register Item"><br>
+<input type="reset" value="Clear Form" name='reset' onclick="return resetForm(this.form);">
+</form>
+  
+</div>
+
+<script>
+</script>
+</body>
+</html>

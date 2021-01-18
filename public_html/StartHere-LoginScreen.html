@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Log in</title>
+</head>
+<body>
+
+<link rel="stylesheet" type="text/css" href="MainStyles.css">
+<script src="MainJava.js"></script>
+
+<h1>Log in</h1><p> All pages print INPUTS to console log on blur.</p><hr>
+<div id="grad1"> 
+
+<form action="LogIn.php">
+
+<table>
+	<tbody>
+		<tr>
+			<td>Username:
+  <input type="text" name="username" placeholder="Your UserName" required minlength="3" maxlength="14" onblur="ConsoleLogData(this.name, this.value)" >
+    </td>
+		</tr>
+		<tr>
+			<td>Password: 
+  <input type="password" name="password" placeholder="Your Password" required minlength="3" maxlength="30" onblur="ConsoleLogData(this.name, this.value)" >
+    </td>
+		</tr>
+	</tbody>
+</table>
+<button type="button" onclick="CheckLogin()"> Login</button><p></p>
+<button type="button"><a href="CreateAccountScreen.html"> Create </a></button>
+<button type="button"> <a href="PasswordRecovery.html"> Retrieve password </a></button>
+
+
+</div>
+
+</form> 
+
+</body>
+</html>

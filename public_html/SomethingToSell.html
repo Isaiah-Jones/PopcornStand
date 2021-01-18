@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="MainStyles.css">
+<script src="MainJava.js"></script>
+<body onload="LoadCurrentlySelling();">
+    <h1>Something To Sell</h1><hr>
+	<div id ="MenuBar"> 
+            <a href="ExchangeScreen.html" class = "button">Exchange Screen</a>
+            <a href="Account InformationPage.html" class = "button">Account Information</a>
+            <a href="AddInventory.html" class = "button">Add Inventory</a>
+            <a href="StartHere-LoginScreen.html" class = "button" style ="float: right;">Sign Out</a>
+			<a href="SomethingToSell.html" class = "button_current">Something to sell?</a>
+    </div>
+<div id="grad1">
+<form id="SomethingToSell" action="" onsubmit="">
+<h1><div id="forSale">Enter the required information for items you want to sell.</div></h1>
+<h2><span class="PTypeHeader">Register Items</span> </h2>
+<span>Enter Price without dollar sign. Ex. "3.99"</span>
+<span id=TableInventory></span>
+<span id=CurrentlySelling></span>
+<!-- Start form code -->
+
+
+
+
+<span>Register current items in order to add more items.</span><br>
+<button type="button" onclick="SellSomething()">Register Item</button>
+<input type="button" value="Clear" onClick="location.href=location.href">
+</form>
+  
+</div>
+
+<script>
+</script>
+</body>
+</html>

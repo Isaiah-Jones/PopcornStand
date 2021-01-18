@@ -1,0 +1,62 @@
+<?php
+	$prodname = $_GET["prodname"];
+	$price = $_GET["price"];
+	$pqty = $_GET["pQuantity"];
+	$pdes = $_GET["pDescription"];
+	$username = $_GET["username"];
+	
+
+	
+	// Need to insert the user
+	
+	// Connect to MySQL
+	$db = mysqli_connect("lxsrv107.oru.edu", "Team5", "Internet-database5", "Team5");
+	if (mysqli_connect_errno()) {
+		print "Connect failed: " . mysqli_connect_error();
+		exit();
+	}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+	// Submit the query to insert the new user
+	$query = "SELECT `Inventory_Pid` FROM `Team5`.`owns` WHERE `Owner` = \"username\";"; 
+
+	
+	$result = mysqli_query($db, $query);
+	if (!$result) {
+		print "Error - theis query could not be executed" . 
+		mysqli_error();
+		exit;
+	}
+	// Get the number of rows in the result
+	$num_rows = mysqli_num_rows($result);
+	
+	if ($num_rows == 0) {
+		$rcode = "no";
+	} else {
+		$row = mysqli_fetch_array($result);
+
+		$prodID=$row[0];
+	}
+	
+//////////////////////////////////////////////////////////////////////////////////////////////////
+	// Submit the query to insert the new user
+	$query = "SELECT `Quantity` FROM `Team5`.`owns` WHERE `Owner` = \"username\";"; 
+
+	
+	$result = mysqli_query($db, $query);
+	if (!$result) {
+		print "Error - theis query could not be executed" . 
+		mysqli_error();
+		exit;
+	}
+	// Get the number of rows in the result
+	$num_rows = mysqli_num_rows($result);
+	
+	if ($num_rows == 0) {
+		$rcode = "no";
+	} else {
+		$row = mysqli_fetch_array($result);
+
+		$prodQty=$row[0];
+	}
+	
